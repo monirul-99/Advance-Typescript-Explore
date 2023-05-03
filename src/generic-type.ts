@@ -18,9 +18,14 @@ type RelationType = {
     name: string, salary: number
 }
 
+interface IRelationType {
+    name: string,
+    salary: number
+}
+
 const relation:GenericTuple<string, string> = ["Persian", "kate Ria"]
 //Not Good Practice BCZ object inside any data provide
 const nearByRelation:GenericTuple<RelationType, string> = [{name: "Monirul", salary: 25000}, "Front-End Developer"]
 
 //Good practice
-const goodRelation:GenericTuple<RelationType, string> = [{name: "Monirul", salary: 25000}, "Front-End Developer"]
+const goodRelation:GenericTuple<IRelationType, string> = [{name: "Monirul", salary: 25000}, "Front-End Developer"]
